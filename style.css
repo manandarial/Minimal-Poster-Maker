@@ -1,0 +1,213 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  min-height: 100vh;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* make images easier to work with */
+img,
+picutre {
+  max-width: 100%;
+  display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* My Stylesheet */
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --font-size-sm: 0.8rem;
+  --font-size-lg: 2rem;
+  --line-height-title: 2rem;
+  --font-family: "Fira Mono", monospace;
+  --font-family-title: "Montserrat", sans-serif;
+  --bg-color: #f9e6d5;
+  --frame-color: #333333;
+  --webkit-box-shadow: -23px 12px 23px -7px rgba(0, 0, 0, 0.26);
+  --moz-box-shadow: -23px 12px 23px -7px rgba(0, 0, 0, 0.26);
+  --box-shadow: 0px 0px 3.1px rgba(0, 0, 0, 0.019),
+    0px 0px 7.9px rgba(0, 0, 0, 0.027), 0px 0px 16.1px rgba(0, 0, 0, 0.033),
+    0px 0px 33.2px rgba(0, 0, 0, 0.041), 0px 0px 91px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+  height: 800px;
+  width: 600px;
+  border: 15px solid var(--frame-color);
+  -webkit-box-shadow: var(--webkit-box-shadow);
+  -moz-box-shadow: var(--moz-box-shadow);
+  box-shadow: var(--box-shadow);
+  background-color: var(--bg-color);
+  font-family: var(--font-family);
+  padding: 40px 0px;
+}
+.info1 {
+  display: flex;
+  flex-direction: row;
+  font-size: var(--font-size-sm);
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 80px;
+}
+
+.date-time,
+.colors {
+  display: flex;
+  align-items: center;
+}
+
+.info2 {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  margin-top: 30px;
+}
+
+.title,
+.location {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-family-title);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  width: 160px;
+  line-height: var(--line-height-title);
+}
+.location {
+  align-items: flex-end;
+  font-weight: 700;
+}
+
+.image-container {
+  height: 500px;
+  width: 410px;
+  text-align: center;
+  background-color: red;
+  margin: 15px auto;
+}
+
+.footer {
+  padding: 0 80px;
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+}
+
+.footer .author {
+  width: 100px;
+}
+
+.footer .device-info {
+  width: 150px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  height: 50vh;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 400px;
+  transition: all 0.2s ease-in;
+}
+
+label {
+  font-family: var(--font-family);
+}
+
+form:hover {
+  box-shadow: var(--box-shadow);
+}
+input {
+  width: 100%;
+  height: 100%;
+  padding: 4px 20px;
+  border: 1px solid green;
+}
+
+.default-text {
+  font-size: var(--font-family-title);
+  font-family: var(--font-family);
+  font-weight: 900;
+  text-align: center;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.file-upload {
+  border: 1px solid green;
+  padding: 12px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  background: green;
+  color: #fff;
+  text-align: center;
+}
+
+.gear-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-preview {
+  display: none;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

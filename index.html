@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="/script.js" defer></script>
+    <title>Minimal Poster</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="date"
+        >Choose Date:
+
+        <input type="date" name="date" id="date" value="2022-03-02" />
+      </label>
+      <label for="title"
+        >Name:
+        <input type="text" name="title" id="title" value="Burj Al Arab" />
+      </label>
+
+      <label for="location"
+        >Location:
+        <input type="text" name="location" id="location" value="Dubai, UAE" />
+      </label>
+      <label for="author"
+        >Author:
+        <input type="text" name="author" id="author" value="Abdul Manan" />
+      </label>
+      <label for="device-info"
+        >Shot with:
+        <input
+          type="text"
+          name="device-info"
+          id="device-info"
+          value="DJI Mavic Pro"
+        />
+      </label>
+      <label for="inpFile" class="file-upload">
+        <i class="fa fa-cloud-upload"></i>Upload Picture
+      </label>
+      <input
+        type="file"
+        name="inpFile"
+        id="inpFile"
+        accept="image/png,
+        image/jpg, image/jpeg"
+      />
+    </form>
+
+    <div class="container">
+      <div class="info1">
+        <div class="date-time">2022-03-02</div>
+        <div class="colors">#FFFFFF</div>
+      </div>
+      <div class="info2">
+        <div class="title">Burj Al Arab</div>
+        <div class="location">Dubai, UAE</div>
+      </div>
+      <div class="image-container" id="imagePreview">
+        <img src="" alt="image preview" class="image-preview" />
+        <!-- <div class="default-text">You image will appear here.</div> -->
+      </div>
+      <div class="footer">
+        <div class="author">Abdul Manan</div>
+        <div class="gear-info">
+          Shot with <span class="device-info">DJI Mavic Pro</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<div></div>

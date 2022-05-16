@@ -140,6 +140,7 @@ select {
 
 .footer {
   padding: 0 80px;
+  margin: -15px 0px;
   display: flex;
   justify-content: space-between;
   font-size: var(--font-size-sm);
